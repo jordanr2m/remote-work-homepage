@@ -1,3 +1,12 @@
+html {
+    box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
 
 .logo {
     padding: 1rem 0.75rem;
@@ -15,20 +24,31 @@
 
 a {
     text-decoration: none;
+    color: hsl(0, 0%, 41%);
+    font-size: 15px;
 }
 
-/* Media Queries - DESKTOP */
-@media screen and (min-width: 400px) {
+a:hover {
+    color: hsl(0, 0%, 8%);
+}
+
+/* Media Queries - DESKTOP styles */
+@media screen and (min-width: 915px) {
     .wrapper {
-        max-width: 1200px;
+        width: 90%;
+        /* max-width: 1100px; */
         margin: 0 auto;
     }
-    
+
+    .logo {
+        padding: 1.5rem 0;
+    }
+
     .navbar {
         display: flex;
         align-items: center;
     }
-    
+
     nav {
         display: flex;
         width: 100%;
@@ -41,27 +61,52 @@ a {
     menu {
         padding: 0;
         margin: 0;
+        width: 100%;
     }
 
     .nav-links {
-        width: 100%;
         display: flex;
         justify-content: space-between;
+        align-items: center;
     }
 
     ul {
         list-style: none;
     }
 
+    ul li {
+        padding-left: 2.5rem;
+    }
+
     ul.main-menu {
+        padding-left: 1.5rem;
         display: flex;
+    }
+
+    .submenu-open::after {
+        content: url(../../assets/icon-arrow-up.svg);
+        color: hsl(0, 0%, 41%);
+        padding-left: 7px;
+    }
+
+    .submenu-closed::after {
+        content: url(../../assets/icon-arrow-down.svg);
+        color: hsl(0, 0%, 41%);
+        padding-left: 7px;
     }
 
     ul.login-menu {
         display: flex;
+        align-items: center;
     }
 
-    ul li {
-        padding-left: 1rem;
+    ul.login-menu li:first-child {
+        margin-right: 2.5rem;
+    }
+
+    li.register {
+        border: 2px solid hsl(0, 0%, 41%);
+        padding: 0.7rem 1.25rem;
+        border-radius: 14px;
     }
 }
