@@ -1,0 +1,11 @@
+.hero-img {
+    background-image: url(../../assets/image-hero-mobile.png);
+    background-size: cover;
+    height: 300px;
+    margin: 0 -0.5rem;
+}
+
+
+@media screen and (min-width: 915px) {
+    
+}
