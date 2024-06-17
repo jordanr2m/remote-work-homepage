@@ -5,6 +5,55 @@
     margin: 0 -0.5rem;
 }
 
+.content {
+    text-align: center;
+}
+
+.content h1 {
+    font-size: 2rem;
+    padding-top: 1.25rem;
+}
+
+.content p {
+    color: var(--medium-grey);
+    line-height: 1.5rem;
+}
+
+button.learn-more {
+    font-family: "Epilogue", sans-serif;
+    font-weight: 500;
+    font-size: 0.95rem;
+    color: var(--off-white);
+    background-color: var(--dark-grey);
+    border: 2px solid transparent;
+    border-radius: 13px;
+    padding: 0.75rem 1.1rem;
+    margin-top: 0.5rem;
+}
+
+.endorsement-icons {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 3.5rem;
+}
+
+.endorsement-icons img {
+    flex: 1;
+    max-width: 80px;
+}
+
+.endorsement-icons img {
+    padding-left: 10px;
+}
+
+.endorsement-icons img:first-child {
+    padding-left: 0; /* remove padding from first icon */
+}
+
+img[alt="audiophile"] {
+    max-width: 70px;
+}
 
 @media screen and (min-width: 915px) {
     

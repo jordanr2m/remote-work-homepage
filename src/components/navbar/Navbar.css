@@ -24,12 +24,12 @@ html {
 
 a {
     text-decoration: none;
-    color: hsl(0, 0%, 41%);
+    color: var(--medium-grey);
     font-size: 15px;
 }
 
 a:hover {
-    color: hsl(0, 0%, 8%);
+    color: var(--dark-grey);
 }
 
 /* Media Queries - DESKTOP styles */
@@ -79,13 +79,13 @@ a:hover {
 
     .submenu-open::after {
         content: url(../../assets/icon-arrow-up.svg);
-        color: hsl(0, 0%, 41%);
+        color: var(--medium-grey);
         padding-left: 7px;
     }
 
     .submenu-closed::after {
         content: url(../../assets/icon-arrow-down.svg);
-        color: hsl(0, 0%, 41%);
+        color: var(--medium-grey);
         padding-left: 7px;
     }
 
@@ -99,7 +99,7 @@ a:hover {
     }
 
     li.register {
-        border: 2px solid hsl(0, 0%, 41%);
+        border: 2px solid var(--medium-grey);
         padding: 0.7rem 1.25rem;
         border-radius: 14px;
     }

@@ -1,3 +1,9 @@
+:root {
+    --off-white: hsl(0, 0%, 98%);
+    --medium-grey: hsl(0, 0%, 41%);
+    --dark-grey: hsl(0, 0%, 8%);
+}
+
 /* Mobile Design */
 .App {
     font-family: "Epilogue", sans-serif;
