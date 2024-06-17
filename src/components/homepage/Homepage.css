@@ -52,7 +52,13 @@ button.learn-more {
 }
 
 img[alt="audiophile"] {
-    max-width: 70px;
+    max-width: 70px; /* Account for size difference */
+}
+
+
+/* Media Query - TABLETS */
+@media screen and (min-width: 675px) {
+    
 }
 
 @media screen and (min-width: 915px) {
