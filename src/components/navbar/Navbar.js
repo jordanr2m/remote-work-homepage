@@ -10,6 +10,10 @@ const Navbar = () => {
     const [showSubMenu1, setShowSubMenu1] = useState(false);
     const [showSubMenu2, setShowSubMenu2] = useState(false);
 
+    const hideMenu = () => {
+        setShowMenu(false);
+    }
+
     const toggleMenu = () => {
         setShowMenu(!showMenu)
     };
@@ -27,7 +31,7 @@ const Navbar = () => {
             <a href="#"><img src={logo} alt="snap logo" className="logo" /></a>
 
             <menu>
-                <div className="modal-backdrop"></div>
+                <div className={showMenu ? "nav-wrapper show-nav-wrapper" : "nav-wrapper"} onClick={hideMenu}></div>
 
                 <div className="nav-links" id={showMenu ? "mobile-nav-links" : "hide-mobile-nav-links"}>
                     <ul className="main-menu">

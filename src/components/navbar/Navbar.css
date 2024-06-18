@@ -30,7 +30,12 @@ button.close-icon {
 }
 
 .nav-links {
-    display: none;
+    display: none; /* Hide on mobile */
+}
+
+.nav-links ul {
+    list-style: none;
+    padding: 0 1rem;
 }
 
 a {
@@ -43,7 +48,53 @@ a:hover {
     color: var(--dark-grey);
 }
 
-/* Media Queries - DESKTOP styles */
+.submenu-open::after {
+    content: url(../../assets/icon-arrow-up.svg);
+    color: var(--medium-grey);
+    padding-left: 7px;
+}
+
+.submenu-closed::after {
+    content: url(../../assets/icon-arrow-down.svg);
+    color: var(--medium-grey);
+    padding-left: 7px;
+}
+
+/* Style links the same when shown and hidden*/
+/* #mobile-nav-links,
+#hide-mobile-nav-links {
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 65%;
+    display: block;
+    background-color: #fff;
+    padding: 4rem 0.75rem;
+    transition: all 0.3s;
+} */
+
+.nav-links li {
+    padding-bottom: 1.5rem;
+}
+
+.login-menu {
+    text-align: center;
+}
+
+li.register {
+    border: 2px solid var(--medium-grey);
+    border-radius: 14px;
+    text-align: center;
+}
+
+/* Black ackground div */
+
+
+
+
+
+/* ======== Media Queries - DESKTOP STYLES!!!!! ========= */
 @media screen and (min-width: 975px) {
     .logo {
         padding: 1.5rem 0;
@@ -75,8 +126,8 @@ a:hover {
         align-items: center;
     }
 
-    ul {
-        list-style: none;
+    .nav-links li {
+        padding-bottom: 0;
     }
 
     ul li {
@@ -88,21 +139,10 @@ a:hover {
         display: flex;
     }
 
-    .submenu-open::after {
-        content: url(../../assets/icon-arrow-up.svg);
-        color: var(--medium-grey);
-        padding-left: 7px;
-    }
-
-    .submenu-closed::after {
-        content: url(../../assets/icon-arrow-down.svg);
-        color: var(--medium-grey);
-        padding-left: 7px;
-    }
-
     ul.login-menu {
         display: flex;
         align-items: center;
+        padding: 0 0 0 40px;
     }
 
     ul.login-menu li:first-child {
@@ -110,8 +150,6 @@ a:hover {
     }
 
     li.register {
-        border: 2px solid var(--medium-grey);
         padding: 0.7rem 1.25rem;
-        border-radius: 14px;
     }
 }
