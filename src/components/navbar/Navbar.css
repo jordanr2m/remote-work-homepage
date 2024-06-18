@@ -18,6 +18,23 @@ html {
     right: 1rem;
 }
 
+.menu-icons button {
+    border: none;
+    background-color: transparent;
+}
+
+button.open-icon {
+    background-image: url(../../assets/icon-menu.svg);
+    height: 18px;
+    width: 30px;
+}
+
+button.close-icon {
+    background-image: url(../../assets/icon-close-menu.svg);
+    height: 27px;
+    width: 27px;
+}
+
 .nav-links {
     display: none;
 }
@@ -33,7 +50,7 @@ a:hover {
 }
 
 /* Media Queries - DESKTOP styles */
-@media screen and (min-width: 915px) {
+@media screen and (min-width: 1025px) {
     .logo {
         padding: 1.5rem 0;
     }

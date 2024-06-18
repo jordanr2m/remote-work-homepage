@@ -1,8 +1,14 @@
 .hero-img {
     background-image: url(../../assets/image-hero-mobile.png);
-    background-size: cover;
+    background-size: 100%;
+    background-repeat: no-repeat;
     height: 300px;
-    margin: 0 -0.5rem;
+    margin: 0 -1.5rem;
+}
+
+.text-wrapper {
+    width: 90%;
+    margin: 0 auto;
 }
 
 .content {
@@ -11,7 +17,7 @@
 
 .content h1 {
     font-size: 2rem;
-    padding-top: 1.25rem;
+    padding-top: 1rem;
 }
 
 .content p {
@@ -31,6 +37,13 @@ button.learn-more {
     margin-top: 0.5rem;
 }
 
+button.learn-more:hover {
+    cursor: pointer;
+    background-color: transparent;
+    color: var(--dark-grey);
+    border: 2px solid var(--dark-grey);
+}
+
 .endorsement-icons {
     display: flex;
     align-items: center;
@@ -41,9 +54,6 @@ button.learn-more {
 .endorsement-icons img {
     flex: 1;
     max-width: 80px;
-}
-
-.endorsement-icons img {
     padding-left: 10px;
 }
 
@@ -58,9 +68,82 @@ img[alt="audiophile"] {
 
 /* Media Query - TABLETS */
 @media screen and (min-width: 675px) {
-    
+    .hero-img {
+        height: 50vh;
+    }
+
+    .endorsement-icons img {
+        max-width: 100px;
+    }
+
+    img[alt="audiophile"] {
+        max-width: 90px; /* Account for size difference */
+    }
 }
 
-@media screen and (min-width: 915px) {
+/* Media Query - DESKTOP */
+@media screen and (min-width: 1025px) {
+    section.homepage {
+        display: flex;
+        justify-content: center;
+        height: 100%;
+        margin: 4rem auto 0 auto;
+    }
+
+    .content {
+        order: 1;
+        flex-basis: 60%;
+        text-align: left;
+        display: flex;
+        flex-flow: column wrap;
+        justify-content: center;
+    }
+    
+    .text-wrapper {
+        width: 70%;
+        margin-right: 5rem;
+    }
+
+    .content h1 {
+        font-size: 4.9rem;
+        margin-bottom: 3rem;
+    }
+
+    .content p {
+        font-size: 1.2rem;
+        line-height: 1.75rem;
+        margin-top: 0;
+        margin-bottom: 3rem;
+    }
+
+    button.learn-more {
+        font-size: 1.1rem;
+        padding: 1rem 1.5rem;
+        align-self: flex-start;
+        margin-bottom: 3rem;
+    }
+
+    .endorsement-icons img {
+        max-width: 110px;
+        padding-left: 15px;
+    }
+
+    img[alt="audiophile"] {
+        max-width: 90px; /* Account for size difference */
+    }
+
+    .endorsement-icons img:first-child {
+        padding-left: 0; /* remove padding from first icon */
+    }
+
+    .hero-img {
+        background-image: url(../../assets/image-hero-desktop.png);
+        background-size: contain;
+        margin: 0;
+        height: auto;
+        flex-basis: 40%;
+        order: 2;
+    }
+
     
 }

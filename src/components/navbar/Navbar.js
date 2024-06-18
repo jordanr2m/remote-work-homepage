@@ -2,8 +2,8 @@ import "./Navbar.css";
 import { useState } from "react";
 // Import images
 import logo from "../../assets/logo.svg";
-import menuIcon from "../../assets/icon-menu.svg";
-import closeIcon from "../../assets/icon-close-menu.svg";
+// import menuIcon from "../../assets/icon-menu.svg";
+// import closeIcon from "../../assets/icon-close-menu.svg";
 
 const Navbar = () => {
     const [showMenu, setShowMenu] = useState(false);
@@ -53,9 +53,11 @@ const Navbar = () => {
             {/* Div to hold hamburger icon and close icon */}
             <div className='menu-icons' onClick={toggleMenu}>
                 {showMenu ? (
-                    <img src={closeIcon} alt="close menu" />
+                    // <img src={closeIcon} alt="close menu" />
+                    <button className="close-icon"></button>
                 ) : (
-                    <img src={menuIcon} alt="open menu" />
+                    // <img src={menuIcon} alt="open menu" />
+                    <button className="open-icon"></button>
                 )}
             </div>
         </nav>
