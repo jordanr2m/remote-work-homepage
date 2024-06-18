@@ -50,7 +50,7 @@ a:hover {
 }
 
 /* Media Queries - DESKTOP styles */
-@media screen and (min-width: 1025px) {
+@media screen and (min-width: 975px) {
     .logo {
         padding: 1.5rem 0;
     }

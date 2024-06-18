@@ -69,7 +69,7 @@ img[alt="audiophile"] {
 /* Media Query - TABLETS */
 @media screen and (min-width: 675px) {
     .hero-img {
-        height: 50vh;
+        height: 60vh;
     }
 
     .endorsement-icons img {
@@ -82,31 +82,33 @@ img[alt="audiophile"] {
 }
 
 /* Media Query - DESKTOP */
-@media screen and (min-width: 1025px) {
+@media screen and (min-width: 975px) {
     section.homepage {
+        width: 90%;
         display: flex;
-        justify-content: center;
         height: 100%;
-        margin: 4rem auto 0 auto;
+        margin: 0 auto;
+        margin-top: 5rem;
     }
 
-    .content {
+    main.content {
         order: 1;
-        flex-basis: 60%;
+        width: 60%;
         text-align: left;
-        display: flex;
+        /* display: flex;
         flex-flow: column wrap;
-        justify-content: center;
+        justify-content: center; */
     }
-    
+
     .text-wrapper {
-        width: 70%;
-        margin-right: 5rem;
+        margin: 0;
     }
 
     .content h1 {
-        font-size: 4.9rem;
+        font-size: 3.5rem;
         margin-bottom: 3rem;
+        margin-top: 0;
+        width: 80%;
     }
 
     .content p {
@@ -120,12 +122,16 @@ img[alt="audiophile"] {
         font-size: 1.1rem;
         padding: 1rem 1.5rem;
         align-self: flex-start;
-        margin-bottom: 3rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .endorsement-icons {
+        align-self: flex-start;
     }
 
     .endorsement-icons img {
         max-width: 110px;
-        padding-left: 15px;
+        /* padding-left: 15px; */
     }
 
     img[alt="audiophile"] {
@@ -139,11 +145,30 @@ img[alt="audiophile"] {
     .hero-img {
         background-image: url(../../assets/image-hero-desktop.png);
         background-size: contain;
+        background-position: center;
         margin: 0;
         height: auto;
-        flex-basis: 40%;
+        width: 40%;
         order: 2;
+    }   
+}
+
+/* Media Query - LARGE DESKTOPS */
+@media screen and (min-width: 1200px) {
+    section.homepage {
+        width: 80%;
     }
 
-    
+    .content h1 {
+        font-size: 4rem;
+        width: 68%;
+    }
+
+    .text-wrapper {
+        width: 80%;
+    }
+
+    .hero-img {
+        
+    }
 }
