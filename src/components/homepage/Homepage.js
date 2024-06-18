@@ -7,7 +7,7 @@ import maker from "../../assets/client-maker.svg";
 
 const Homepage = () => {
     return (
-        <section className="homepage">
+        <section className="homepage wrapper">
             <div className="hero-img"></div>
 
             <main className="content">

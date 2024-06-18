@@ -7,7 +7,6 @@
 }
 
 .text-wrapper {
-    width: 90%;
     margin: 0 auto;
 }
 
@@ -72,6 +71,14 @@ img[alt="audiophile"] {
         height: 60vh;
     }
 
+    .content h1 {
+        margin-top: 2.5rem;
+    }
+
+    .endorsement-icons {
+        padding-bottom: 1rem;
+    }
+
     .endorsement-icons img {
         max-width: 100px;
     }
@@ -84,10 +91,8 @@ img[alt="audiophile"] {
 /* Media Query - DESKTOP */
 @media screen and (min-width: 975px) {
     section.homepage {
-        width: 90%;
         display: flex;
         height: 100%;
-        margin: 0 auto;
         margin-top: 5rem;
     }
 
@@ -95,13 +100,11 @@ img[alt="audiophile"] {
         order: 1;
         width: 60%;
         text-align: left;
-        /* display: flex;
-        flex-flow: column wrap;
-        justify-content: center; */
     }
 
     .text-wrapper {
         margin: 0;
+        width: 90%;
     }
 
     .content h1 {
@@ -126,12 +129,11 @@ img[alt="audiophile"] {
     }
 
     .endorsement-icons {
-        align-self: flex-start;
+        padding-bottom: 1.5rem;
     }
 
     .endorsement-icons img {
         max-width: 110px;
-        /* padding-left: 15px; */
     }
 
     img[alt="audiophile"] {
@@ -146,7 +148,7 @@ img[alt="audiophile"] {
         background-image: url(../../assets/image-hero-desktop.png);
         background-size: contain;
         background-position: center;
-        margin: 0;
+        margin: -40px 0 0 0;
         height: auto;
         width: 40%;
         order: 2;
@@ -161,14 +163,30 @@ img[alt="audiophile"] {
 
     .content h1 {
         font-size: 4rem;
-        width: 68%;
+        width: 95%;
     }
 
     .text-wrapper {
         width: 80%;
     }
 
+    button.learn-more {
+        margin-bottom: 3rem;
+    }
+
     .hero-img {
-        
+        margin-top: -45px;
+        margin-bottom: 20px;
+    }
+}
+
+/* Fix text on large screen */
+@media screen and (min-width: 1300px) {
+    .content h1 {
+        width: 85%;
+    }
+
+    .text-wrapper {
+        width: 70%;
     }
 }
