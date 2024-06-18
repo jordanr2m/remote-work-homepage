@@ -10,6 +10,7 @@
     position: absolute;
     top: 1.5rem;
     right: 1rem;
+    z-index: 99;
 }
 
 .menu-icons button {
@@ -61,7 +62,7 @@ a:hover {
 }
 
 /* Style links the same when shown and hidden*/
-/* #mobile-nav-links,
+#mobile-nav-links,
 #hide-mobile-nav-links {
     position: fixed;
     top: 0;
@@ -72,9 +73,9 @@ a:hover {
     background-color: #fff;
     padding: 4rem 0.75rem;
     transition: all 0.3s;
-} */
+}
 
-.nav-links li {
+.main-menu li {
     padding-bottom: 1.5rem;
 }
 
@@ -85,13 +86,21 @@ a:hover {
 li.register {
     border: 2px solid var(--medium-grey);
     border-radius: 14px;
-    text-align: center;
+    padding: 0.7rem 1.25rem;
+    margin-top: 1rem;
 }
 
 /* Black ackground div */
 
 
-
+/* ======== Media Queries - TABLET ========= */
+/* Fix Register button on tablet */
+@media screen and (min-width: 675px) {
+    li.register {
+        width: 80%;
+        margin: 1rem auto 0 auto;
+    }
+}
 
 
 /* ======== Media Queries - DESKTOP STYLES!!!!! ========= */
@@ -150,6 +159,7 @@ li.register {
     }
 
     li.register {
+        margin-top: 0;
         padding: 0.7rem 1.25rem;
     }
 }
