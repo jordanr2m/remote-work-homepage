@@ -61,7 +61,7 @@ a:hover {
     padding-left: 7px;
 }
 
-/* Style links the same when shown and hidden*/
+/* Style links the same when shown and hidden in order to get animation */
 #mobile-nav-links,
 #hide-mobile-nav-links {
     position: fixed;
@@ -69,7 +69,7 @@ a:hover {
     right: 0;
     height: 100vh;
     width: 65%;
-    display: block;
+    display: block; /* Make it visible */
     background-color: #fff;
     padding: 4rem 0.75rem;
     transition: all 0.3s;
@@ -90,7 +90,17 @@ li.register {
     margin-top: 1rem;
 }
 
-/* Black ackground div */
+/* Position nav menus */
+.navbar #mobile-nav-links {
+    transform: translateX(0);
+}
+
+.navbar #hide-mobile-nav-links {
+    transform: translateX(200%);
+}
+
+/* Black background div (nav wrapper) styles */
+
 
 
 /* ======== Media Queries - TABLET ========= */
@@ -107,6 +117,20 @@ li.register {
 @media screen and (min-width: 975px) {
     .logo {
         padding: 1.5rem 0;
+    }
+
+    /* NAVBAR stlyes for DESKTOP. Needed in order to have animation */
+    .navbar #hide-mobile-nav-links {
+        transform: translateX(0);
+        position: relative;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0;
     }
 
     .navbar {
@@ -159,6 +183,7 @@ li.register {
     }
 
     li.register {
+        width: auto;
         margin-top: 0;
         padding: 0.7rem 1.25rem;
     }
