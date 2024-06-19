@@ -30,6 +30,17 @@ const Navbar = () => {
         <nav className="navbar wrapper">
             <a href="#"><img src={logo} alt="snap logo" className="logo" /></a>
 
+            {/* Div to hold hamburger icon and close icon */}
+            <div className='menu-icons' onClick={toggleMenu}>
+                {showMenu ? (
+                    // <img src={closeIcon} alt="close menu" />
+                    <button className="close-icon"></button>
+                ) : (
+                    // <img src={menuIcon} alt="open menu" />
+                    <button className="open-icon"></button>
+                )}
+            </div>
+
             <menu>
                 <div className={showMenu ? "nav-wrapper show-nav-wrapper" : "nav-wrapper"} onClick={hideMenu}></div>
 
@@ -54,16 +65,7 @@ const Navbar = () => {
                 </div>
             </menu>
 
-            {/* Div to hold hamburger icon and close icon */}
-            <div className='menu-icons' onClick={toggleMenu}>
-                {showMenu ? (
-                    // <img src={closeIcon} alt="close menu" />
-                    <button className="close-icon"></button>
-                ) : (
-                    // <img src={menuIcon} alt="open menu" />
-                    <button className="open-icon"></button>
-                )}
-            </div>
+            
         </nav>
     )
 }

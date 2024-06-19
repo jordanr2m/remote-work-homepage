@@ -1,4 +1,4 @@
-/* ===== Navbar MOBILE Styles ===== */
+/* ===== Navbar Styles - MOBILE FIRST ===== */
 .logo {
     padding: 1rem 0;
 }
@@ -125,9 +125,7 @@ li.register {
         transform: translateX(0); /* Bring it back onto page */
         width: 100%;
         height: auto;
-        position: relative;
-        top: 0;
-        left: 0;
+        position: static; /* put back in original position */
         display: flex;
         justify-content: space-between;
         align-items: center;
