@@ -30,7 +30,7 @@ const Navbar = () => {
         <nav className="navbar wrapper">
             <a href="#"><img src={logo} alt="snap logo" className="logo" /></a>
 
-            {/* Div to hold hamburger icon and close icon */}
+            {/* Div to hold hamburger icon and close icon. Place in this order for accessible */}
             <div className='menu-icons' onClick={toggleMenu}>
                 {showMenu ? (
                     // <img src={closeIcon} alt="close menu" />
@@ -64,8 +64,6 @@ const Navbar = () => {
                     </ul>
                 </div>
             </menu>
-
-            
         </nav>
     )
 }
