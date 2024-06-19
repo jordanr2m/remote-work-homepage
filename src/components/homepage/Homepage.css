@@ -24,7 +24,7 @@
     line-height: 1.5rem;
 }
 
-button.learn-more {
+a.learn-more {
     font-family: "Epilogue", sans-serif;
     font-weight: 500;
     font-size: 0.95rem;
@@ -34,9 +34,10 @@ button.learn-more {
     border-radius: 13px;
     padding: 0.75rem 1.1rem;
     margin-top: 0.5rem;
+    display: inline-block; /* allows for margin */
 }
 
-button.learn-more:hover {
+a.learn-more:hover {
     cursor: pointer;
     background-color: transparent;
     color: var(--dark-grey);
@@ -118,11 +119,11 @@ img[alt="audiophile"] {
         margin-bottom: 3rem;
     }
 
-    button.learn-more {
+    a.learn-more {
         font-size: 1.1rem;
         padding: 1rem 1.5rem;
         align-self: flex-start;
-        margin-bottom: 0.5rem;
+        margin: 0 0 3rem 0;
     }
 
     .endorsement-icons {

@@ -14,7 +14,7 @@ const Homepage = () => {
                 <div className="text-wrapper">
                     <h1>Make remote work</h1>
                     <p>Get your team in sync, no matter your location. Streamline processes, create team rituals, and watch productivity soar.</p>
-                    <button className="learn-more">Learn more</button>
+                    <a className="learn-more" href="https://github.com/jordanr2m">Learn more</a>
 
                     <div className="endorsement-icons">
                         <img src={databiz} alt="databiz" />
