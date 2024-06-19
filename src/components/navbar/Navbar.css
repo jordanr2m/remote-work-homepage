@@ -1,7 +1,4 @@
-.navbar {
-    max-width: 1300px;
-}
-
+/* ===== Navbar MOBILE Styles ===== */
 .logo {
     padding: 1rem 0;
 }
@@ -61,7 +58,7 @@ a:hover {
     padding-left: 7px;
 }
 
-/* Style links the same when shown and hidden in order to get animation */
+/* Style links the same when shown and hidden initially. Create animation */
 #mobile-nav-links,
 #hide-mobile-nav-links {
     position: fixed;
@@ -69,7 +66,7 @@ a:hover {
     right: 0;
     height: 100vh;
     width: 65%;
-    display: block; /* Make it visible */
+    display: block; /* shows it */
     background-color: #fff;
     padding: 4rem 0.75rem;
     transition: all 0.3s;
@@ -115,18 +112,22 @@ li.register {
 
 /* ======== Media Queries - DESKTOP STYLES!!!!! ========= */
 @media screen and (min-width: 975px) {
-    .logo {
-        padding: 1.5rem 0;
+    .navbar {
+        max-width: 1300px;
     }
 
-    /* NAVBAR stlyes for DESKTOP. Needed in order to have animation */
+    .logo {
+        padding-top: 1.5rem;
+    }
+
+    /* NAVBAR stlyes for DESKTOP */
     .navbar #hide-mobile-nav-links {
-        transform: translateX(0);
+        transform: translateX(0); /* Bring it back onto page */
+        width: 100%;
+        height: auto;
         position: relative;
         top: 0;
         left: 0;
-        width: 100%;
-        height: auto;
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -138,25 +139,14 @@ li.register {
         align-items: center;
     }
 
-    nav {
-        display: flex;
-        width: 100%;
-    }
-
     .menu-icons {
-        display: none;
+        display: none; /* Hide mobile menu icons */
     }
 
     menu {
         padding: 0;
         margin: 0;
         width: 100%;
-    }
-
-    .nav-links {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
     }
 
     .nav-links li {
